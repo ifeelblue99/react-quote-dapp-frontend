@@ -26,6 +26,7 @@ export default function QuoteHolder() {
       {quotes.map((el) => {
         return (
           <Quote
+            key={el[3]}
             author={el[0]}
             publisherName={el[1]}
             quote={el[2]}
