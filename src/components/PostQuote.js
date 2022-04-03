@@ -14,7 +14,7 @@ export default function PostQuote() {
   );
 
   //
-  const isConnected = useSelector((state) => state.conncted);
+  const isConnected = useSelector((state) => state.connected);
   const [formData, setFormData] = React.useState({
     author: '',
     publisherName: '',

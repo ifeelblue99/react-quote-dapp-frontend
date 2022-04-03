@@ -15,7 +15,8 @@ export default function QuoteHolder() {
 
   React.useEffect(() => {
     quoteSmartContract.on('PostQuoteEvent', (newQuote, event) => {
-      console.log(newQuote) / setQuotes((prev) => [...prev, newQuote]);
+      console.log(newQuote);
+      setQuotes((prev) => [...prev, newQuote]);
     });
   }, []);
 

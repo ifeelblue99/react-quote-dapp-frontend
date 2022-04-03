@@ -92,14 +92,13 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   gap: 1rem;
   padding: 1rem 0.5rem;
-  height: 100vh;
 }
 .quote {
   border-radius: 5px;
-  width: 320px;
+  width: 340px;
   border: 1px rgba(128, 128, 128, 0.473) solid;
   padding: 0.5rem;
 }
