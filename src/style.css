@@ -37,7 +37,7 @@ textarea {
 }
 /**/
 .wallet {
-  align-items: center;
+  text-align: center;
   padding: 0.65rem;
   color: rgb(180, 180, 180);
   width: 320px;
@@ -90,6 +90,7 @@ main {
 /**/
 .quote-holder {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
   gap: 1rem;
