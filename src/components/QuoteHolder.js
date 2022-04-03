@@ -12,14 +12,27 @@ export default function QuoteHolder() {
     quoteAbi,
     provider
   );
-  quoteSmartContract.getAllQuotes().then((dt) => {
-    console.log(dt);
-  });
+  const data = [];
+  React.useEffect(() => {
+    quoteSmartContract.getAllQuotes().then((dt) => {
+      setQuotes(dt);
+    });
+  }, []);
+
+  console.log(quotes);
 
   return (
     <div className="quote-holder">
-      <Quote />
-      {quotes}
+      {quotes.map((el) => {
+        return (
+          <Quote
+            author={el[0]}
+            publisherName={el[1]}
+            quote={el[2]}
+            publisher={el[3]}
+          />
+        );
+      })}
     </div>
   );
 }
