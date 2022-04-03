@@ -1,8 +1,6 @@
 :root {
-  --dark-blue: #082c6c;
   --light-blue: #2069e0;
-  --light-gray: #bebebe;
-
+  --light-gray: #c2c2c2;
   --font: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans',
     Arial, sans-serif;
 }
@@ -11,19 +9,12 @@
 }
 body {
   color: var(--light-gray);
-  background-color: var(--dark-blue);
+  background-color: rgb(27, 27, 27);
   font-family: var(--font);
   margin: 0;
 }
 .post {
-  width: 320px;
-  border-radius: 5px;
-  padding: 0 1rem;
-  padding-bottom: 1rem;
-  background-color: var(--light-blue);
-}
-.post h2 {
-  color: white;
+  width: 250px;
 }
 form {
   display: flex;
@@ -34,9 +25,10 @@ form {
 }
 input,
 textarea {
+  background-color: grey;
   width: 100%;
   border: none;
-  padding: 0.4rem;
+  padding: 0.53rem;
   border-radius: 5px;
   resize: none;
 }
@@ -45,14 +37,10 @@ textarea {
 }
 /**/
 .wallet {
-  justify-content: space-evenly;
-  display: flex;
+  align-items: center;
   padding: 0.65rem;
-  color: rgb(36, 36, 36);
-  flex-direction: column;
-  border-radius: 5px;
+  color: rgb(180, 180, 180);
   width: 320px;
-  background-color: var(--light-gray);
 }
 .wallet i {
   font-weight: normal;
@@ -60,11 +48,12 @@ textarea {
 button {
   cursor: pointer;
   border: none;
-  padding: 0.2rem;
-  color: white;
+  padding: 0.4rem 0.8rem;
+  background-color: var(--light-blue);
+  font-weight: bold;
+  color: rgb(253, 253, 253);
   border-radius: 5px;
   transition: 300ms linear;
-  background-color: rgb(0, 0, 0);
 }
 button:hover {
   color: var(--light-gray);
@@ -77,20 +66,16 @@ button:active {
 header {
   position: sticky;
   top: 0;
-  box-shadow: 0px 1px 5px rgb(0, 0, 0);
-  color: white;
-  background-color: var(--light-blue);
+  gap: 1rem;
+  background-color: rgb(66, 66, 66);
+  color: rgba(255, 255, 255, 0.719);
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 a {
   font-weight: bold;
-  color: white;
-  text-decoration: none;
-}
-a:hover {
-  color: var(--accent-color);
+  color: rgb(99, 207, 27);
 }
 /**/
 main {
@@ -99,7 +84,7 @@ main {
   padding: 0.5rem 0;
   flex-wrap: wrap;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
 }
 /**/
@@ -132,9 +117,4 @@ main {
   border-top: 1px rgba(128, 128, 128, 0.466) solid;
   padding: 0.3rem 0.2rem;
   font-size: 0.8rem;
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
-  flex-wrap: wrap;
-  justify-content: space-between;
 }
