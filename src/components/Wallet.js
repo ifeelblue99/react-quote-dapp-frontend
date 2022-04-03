@@ -7,7 +7,12 @@ export default function Wallet(props) {
   return (
     <div className="wallet">
       <h4>
-        Wallet: <i>{walletAddress}</i>
+        Wallet:{' '}
+        <i>
+          {walletAddress.length > 30
+            ? walletAddress.substring(15) + '...'
+            : walletAddress}
+        </i>
       </h4>
       <button onClick={props.connectToMetamask}>
         {connected ? 'You are connected' : 'Connect'}
