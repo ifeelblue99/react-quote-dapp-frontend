@@ -17,7 +17,6 @@ export default function QuoteHolder() {
   React.useEffect(() => {
     quoteSmartContract.getAllQuotes().then((dt) => {
       setQuotes(dt);
-      console.log(dt);
     });
   }, []);
 
@@ -26,7 +25,7 @@ export default function QuoteHolder() {
       {quotes.map((el) => {
         return (
           <Quote
-            key={el[4].hex}
+            key={el[4]._hex}
             author={el[0]}
             publisherName={el[1]}
             quote={el[2]}
