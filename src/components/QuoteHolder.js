@@ -19,8 +19,6 @@ export default function QuoteHolder() {
     });
   }, []);
 
-  console.log(quotes);
-
   return (
     <div className="quote-holder">
       {quotes.map((el) => {

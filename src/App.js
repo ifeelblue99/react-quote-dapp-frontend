@@ -11,15 +11,17 @@ import './style.css';
 export default function App() {
   const connected = useSelector((state) => state.connected);
   // on disconnection
-  window.ethereum.on('accountsChanged', () => {
-    store.dispatch({
-      type: 'disconnect',
-      payload: {
-        walletAddress: 'Disconnected...',
-        connected: false,
-      },
+  if (connected) {
+    window.ethereum.on('accountsChanged', () => {
+      store.dispatch({
+        type: 'disconnect',
+        payload: {
+          walletAddress: 'Disconnected...',
+          connected: false,
+        },
+      });
     });
-  });
+  }
   async function connect() {
     try {
       const account = await connectToMetamask();
