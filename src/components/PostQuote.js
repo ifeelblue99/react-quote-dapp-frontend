@@ -1,9 +1,20 @@
 import React from 'react';
+import { ethers } from 'ethers';
+import { quoteAbi, quoteContractAddress } from '../contract/abi-address.js';
 import '../style.css';
-import postQuote from '../redux/reducer';
-import store from '../redux/store';
+import { useSelector } from 'react-redux';
 
 export default function PostQuote() {
+  //
+  const signer = new ethers.providers.Web3Provider(window.ethereum).getSigner();
+  const quoteSmartContract = new ethers.Contract(
+    quoteContractAddress,
+    quoteAbi,
+    signer
+  );
+
+  //
+  const isConnected = useSelector((state) => state.conncted);
   const [formData, setFormData] = React.useState({
     author: '',
     publisherName: '',
@@ -20,15 +31,16 @@ export default function PostQuote() {
     });
     console.log(formData);
   }
-  //
-  function handleSubmit(event) {
+  // submit
+  async function handleSubmit(event) {
     event.preventDefault();
-    // store.dispatch({
-    //   type: 'add',
-    //   payload: {},
-    // });
+    if (!isConnected) return;
+    const { author, publisherName, quote } = formData;
+    quoteSmartContract
+      .postQuote(author, publisherName, quote)
+      .then((dt) => console.log(dt));
   }
-  //
+
   return (
     <div className="post">
       <h2>Post quote</h2>
