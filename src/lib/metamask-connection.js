@@ -5,7 +5,6 @@ export async function connectToMetamask() {
     let account = await ethereum.request({ method: 'eth_requestAccounts' });
     return account;
   } catch (err) {
-    console.log('mm', err.message);
     store.dispatch({
       type: 'disconnect',
       payload: {
