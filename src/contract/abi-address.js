@@ -98,52 +98,6 @@ export const quoteAbi = [
   {
     "inputs": [
       {
-        "internalType": "uint256",
-        "name": "_index",
-        "type": "uint256"
-      }
-    ],
-    "name": "getQuotes",
-    "outputs": [
-      {
-        "components": [
-          {
-            "internalType": "string",
-            "name": "author",
-            "type": "string"
-          },
-          {
-            "internalType": "string",
-            "name": "publisherName",
-            "type": "string"
-          },
-          {
-            "internalType": "string",
-            "name": "quote",
-            "type": "string"
-          },
-          {
-            "internalType": "address",
-            "name": "publisherAddress",
-            "type": "address"
-          },
-          {
-            "internalType": "uint256",
-            "name": "createTime",
-            "type": "uint256"
-          }
-        ],
-        "internalType": "struct QuoteChain.Quote",
-        "name": "",
-        "type": "tuple"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
         "internalType": "string",
         "name": "_author",
         "type": "string"
