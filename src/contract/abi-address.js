@@ -165,4 +165,4 @@ export const quoteAbi = [
     "type": "function"
   }
 ],
-export const quoteContractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+export const quoteContractAddress = "0x4f7f3f480Ffd181A64f8d7a573ee52B8d52D2BA2";
