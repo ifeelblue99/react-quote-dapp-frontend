@@ -44,7 +44,7 @@ export default function PostQuote() {
   return (
     <div className="post">
       <h2>Post quote</h2>
-      <form onSubmit={handleSubmit}>
+      <form data-testID="form-test" onSubmit={handleSubmit}>
         <input
           onChange={handleChange}
           name="author"
