@@ -29,7 +29,6 @@ export default function PostQuote() {
         [name]: value,
       };
     });
-    console.log(formData);
   }
   // submit
   async function handleSubmit(event) {
